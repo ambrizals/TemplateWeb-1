@@ -34,7 +34,6 @@ body, h1, h2, h3, h4, p {
 	margin-right:2.5%;
 }
 .btn {
-	background: white;
     border: 1px solid black;
     color: black;
     padding: 1em;
@@ -61,15 +60,24 @@ body, h1, h2, h3, h4, p {
 	padding-top:32px;
 	min-height:200px;
 }
+#services h2 {
+	text-align: center;
+    font-weight: 100;
+}
 #serviceinfo {
 	width:100%;
 	padding-bottom:32px;
 	min-height:200px;
 }
 #portofolio {
-	width:100%;
-	padding-bottom:32px;
-	min-height:200px;
+	width: 100%;
+    padding-bottom: 32px;
+    min-height: 200px;
+    border-radius: 6px;
+    padding: 1em;
+    margin-bottom: 1em;
+    background: #efefef;
+    box-shadow:1px 1px 1px 1px #bababa;
 }
 #portofolio .info {
 	width:35%;
