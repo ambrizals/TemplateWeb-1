@@ -1,8 +1,12 @@
-/* Global Style */
-body {
+/* Reset Layout */
+
+body, h1, h2, h3, h4, p {
 	margin:0;
 	padding:0;
 }
+
+/* Global Style */
+
 .row {
 	width:100%;
 	display:block;
@@ -28,6 +32,22 @@ body {
 	float:left;
 	margin-left:2.5%;
 	margin-right:2.5%;
+}
+.btn {
+	background: white;
+    border: 1px solid black;
+    color: black;
+    padding: 1em;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 0.5em;
+    display: inline-block;
+}
+.btn:hover {
+	background: #35e0dd;
+    border: 1px solid #41d8d6;
+    color: white;
+    transition:0.1s ease;
 }
 
 /* Main Style */
@@ -65,5 +85,36 @@ footer{
 	width:100%;
 	height:200px;
 	display:block;
+	background:url(img/bc_bg.png) repeat;
+	color:white;
+}
+footer .subscribe {
+	padding: 0.5em;
+    width: 100%;
+    margin-top:1em;
+}
+footer h2{
+	border-bottom: 1px solid;
+    padding: 0.4em 0;
+    margin-top: 0.4em;
+    font-weight: 100;
+    font-size: 1.4em;
+}
+footer .desc {
+	margin-top:1em;
+	padding-bottom:2em;
+}
+footer .bottomline {
+	background:#692399;
+	padding:0.5em;
+	color:white;
+	width:100%;
+	float:left;
+	padding: 0.5em 1.6em;
+}
+
+header {
 	background:blue;
+	min-height:200px;
+	margin:10px 0;
 }
