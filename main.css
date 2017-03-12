@@ -32,9 +32,14 @@ body, h1, h2, h3, h4, p {
     margin-top: 0.5em;
     display: inline-block;
 }
+.btn-reverse {
+	background: #404142;
+    color: white;
+    border: 1px solid #595a5b;
+}
 .btn:hover {
-	background: #35e0dd;
-    border: 1px solid #41d8d6;
+	background: #4e53db;
+    border: 1px solid #5d61d8;
     color: white;
     transition:0.1s ease;
 }
@@ -45,10 +50,113 @@ body, h1, h2, h3, h4, p {
 }
 
 /* Main Style */
+header {
+	background:url(img/bc_bg.png) repeat;
+}
+header .top {
+	margin:2em 0;
+	display:inline-block;
+}
+header .top .logo {
+	float:left;
+	width:39%;
+}
+header .top .ads {
+	float:left;
+	width:59%;
+}
+header .top .ads .cnt {
+	border:1px solid white;
+	width:100%;
+	color:white;
+	text-align: center;
+	min-height: 80px;
+}
+header .logo img {
+	max-height:5em;
+	width:auto;
+}
+header .menu a {
+	text-decoration: none;
+	color:white;
 
+}
+header .menu {
+	background: #3b2dff;
+}
+header .menu .main {
+	padding:0;
+	margin:0;
+	display:inline-block;
+	margin-left:24px;
+}
+header .menu .main li {
+	list-style: none;
+    float: left;
+    padding: 0.8em 1em 0.5em 1em;
+    margin: 8px 0 0 12px;
+}
+header .menu .main .active, header .menu .main li:hover  {
+	background: white;
+    border-radius: 5px 5px 0em 0em;
+}
+header .menu .main .active a, header .menu .main li:hover a {
+	color:black;
+}
+header .menu .secondary li {
+	list-style: none;
+    float: left;
+    padding: 0.8em 1em 0.5em 1em;
+    margin: 8px 12px 0 0 0;
+}
 .container {
 	width:96%;
 	margin:0 auto;
+}
+#intro {
+    background: url(img/intro.jpg) #333333;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: inline-block;
+    padding: 3em 0;
+    color: white;
+}
+.content {
+	display:inline-block;
+	margin-bottom:2em;
+	padding-bottom:2em;
+	border-bottom:1px solid;
+}
+#intro .question {
+	float: left;
+    width: 30%;
+    padding: 3em 3em;
+}
+#intro .question h2 {
+	background: #404142;
+    display: inline-block;
+    padding: 0.5em;
+}
+#intro .question p {
+	background: #0a771c;
+    display: inline-block;
+    padding: 0.5em 0.8em;
+}
+#intro .answer{
+    float: left;
+    width: 56%;
+    padding: 2em;
+    border: 1px solid;
+    border-radius: 6px;
+}
+#intro .sosmed {
+	text-align: center;
+}
+#intro .sosmed a {
+	color:white;
+	text-decoration: none;
+	font-size:4em;
+	letter-spacing: 20;
 }
 #services {
 	width:100%;
@@ -153,6 +261,10 @@ footer{
 	background:url(img/bc_bg.png) repeat;
 	color:white;
 }
+footer .item {
+	margin-right:2.42em;
+}
+
 footer .subscribe {
 	padding: 0.5em;
     width: 100%;
@@ -177,7 +289,4 @@ footer .bottomline {
 	padding: 0.5em 0;
 }
 
-header {
-	background:blue;
-	min-height:200px;
-}
+
