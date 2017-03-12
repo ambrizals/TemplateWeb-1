@@ -11,15 +11,17 @@ body, h1, h2, h3, h4, p {
 	width:100%;
 	display:block;
 }
-.row .col-3 {
-	width:30%;
+.row .col-2 {
+	width:50%;
 	float:left;
-	margin-right:1%;
+}
+.row .col-3 {
+	width:30.33%;
+	float:left;
 }
 .row .col-4 {
 	width:20%;
 	float:left;
-	margin-right:2.5%;
 }
 .btn {
     border: 1px solid black;
@@ -45,7 +47,7 @@ body, h1, h2, h3, h4, p {
 /* Main Style */
 
 .container {
-	width:86%;
+	width:96%;
 	margin:0 auto;
 }
 #services {
@@ -54,32 +56,50 @@ body, h1, h2, h3, h4, p {
 	display:inline-block;
 	margin-bottom:1em;
 }
-#services h2 {
+#services .info {
+	margin-bottom:1em;
+}
+#services .info h2 {
 	font-size: 1.7em;
 	text-align:center;
 	font-weight: 100;
-	margin-bottom:1em;
+}
+#services .info p {
+	text-align: center;
 }
 #services .item {
-	border:1px solid #efefef;
-	border-radius:6px;
-	padding:0.6em;
-	text-align: center;
+	border: 1px solid #efefef;
+    border-radius: 6px;
+    padding: 0.6em;
+    text-align: center;
+    margin-right: 1.1em;
 }
 #services .item h3 {
 	font-size:1.5em;
 	font-weight: 100;
 	text-align: center;
 }
-#portofolio {
-	width: 100%;
-    padding-bottom: 32px;
-    display:inline-block;
-    border-radius: 6px;
+#services .item .thumb {
+	width: 4em;
+    height: 4em;
+    display: inline-block;
+    background: #32326b;
+    border-radius: 128px;
+    border: 1px solid #45456b;
     padding: 1em;
+    margin: 1em 0;
+}
+#services .item .thumb .fa {
+	color:white;
+	font-size:4em;
+}
+#portofolio {
+	display: inline-block;
     margin-bottom: 1em;
+    width: 96%;
+    padding: 1.17em;
     background: #efefef;
-    box-shadow:1px 1px 1px 1px #bababa;
+    border-radius: 6px;
 }
 #portofolio .info {
 	width:35%;
@@ -87,17 +107,13 @@ body, h1, h2, h3, h4, p {
 	display:block;
 	margin-right:10%;
 }
-#portofolio .list {
-	width:50%;
-	float:left;
-	display:block;
-}
 #portofolio .list .item {
 	border:1px solid #bababa;
 	border-radius:6px;
 	padding:1em;
 	background:white;
 	min-height:100px;
+	margin-right:12px;
 }
 #portofolio .list .item .logo {
     width: 70px;
@@ -155,15 +171,13 @@ footer .desc {
 }
 footer .bottomline {
 	background:#692399;
-	padding:0.5em;
 	color:white;
 	width:100%;
 	float:left;
-	padding: 0.5em 1.6em;
+	padding: 0.5em 0;
 }
 
 header {
 	background:blue;
 	min-height:200px;
-	margin:10px 0;
 }
