@@ -63,7 +63,7 @@ header .top .logo {
 }
 header .top .ads {
 	float:left;
-	width:59%;
+	width:60.8%;
 }
 header .top .ads .cnt {
 	border:1px solid white;
@@ -82,13 +82,12 @@ header .menu a {
 
 }
 header .menu {
-	background: #3b2dff;
+	background: #d46513;
 }
 header .menu .main {
 	padding:0;
 	margin:0;
 	display:inline-block;
-	margin-left:24px;
 }
 header .menu .main li {
 	list-style: none;
@@ -97,17 +96,36 @@ header .menu .main li {
     margin: 8px 0 0 12px;
 }
 header .menu .main .active, header .menu .main li:hover  {
-	background: white;
+	background: #efefef;
     border-radius: 5px 5px 0em 0em;
 }
 header .menu .main .active a, header .menu .main li:hover a {
 	color:black;
 }
-header .menu .secondary li {
+header .second-menu {
+    background: #efefef;
+    padding: 0.8em;
+}
+header .second-menu ul {
 	list-style: none;
-    float: left;
-    padding: 0.8em 1em 0.5em 1em;
-    margin: 8px 12px 0 0 0;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9em;
+    display: inline-block;
+}
+header .second-menu ul li a{
+	color:black;
+	text-decoration: none;
+}
+header .second-menu ul li {
+	float: left;
+    text-decoration: none;
+    color: black;
+    border-left: 1px solid;
+    padding: 0em 0.5em;
+}
+header .second-menu ul li:last-child {
+    border-right: 1px solid;
 }
 .container {
 	width:96%;
@@ -118,7 +136,7 @@ header .menu .secondary li {
     background-size: cover;
     background-blend-mode: multiply;
     display: inline-block;
-    padding: 3em 0;
+    padding: 3.3em 0;
     color: white;
 }
 .content {
@@ -180,7 +198,7 @@ header .menu .secondary li {
     border-radius: 6px;
     padding: 0.6em;
     text-align: center;
-    margin-right: 1.1em;
+    margin-right: 1em;
 }
 #services .item h3 {
 	font-size:1.5em;
