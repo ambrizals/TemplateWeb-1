@@ -188,7 +188,6 @@ header .second-menu ul li:last-child {
 	width:100%;
 	padding: 32px 0;
 	display:inline-block;
-	margin-bottom:1em;
 	color:white;
 }
 #services .info {
@@ -202,6 +201,7 @@ header .second-menu ul li:last-child {
 #services .info p {
 	text-align: center;
 }
+
 #services .item {
     border: 1px solid #efefef;
     border-radius: 4px;
@@ -231,57 +231,35 @@ header .second-menu ul li:last-child {
 	font-size:4em;
 }
 #portofolio {
+	padding:32px 0;
 	display: inline-block;
-    margin-bottom: 1em;
-    width: 96%;
-    padding: 1.17em;
-    background: #efefef;
-    border-radius: 6px;
+    width: 100%;
+    background: url(img/portofolio.png);
 }
 #portofolio .info {
-	width:35%;
+	width: 34.2%;
+    float: left;
+    display: block;
+    margin-right: 3%;
+    border-right: 1px solid;
+}
+#portofolio .item {
+    width: 60%;
+    display: inline-block;
+    float: left;
+}
+#portofolio .item .preview {
+	width: 35%;
+    float: left;
+    margin-right: 5%;
+}
+#portofolio .item .preview img {
+	width: 100%;
+    border-radius: 6px;
+}
+#portofolio .item .info-port {
+	width:60%;
 	float:left;
-	display:block;
-	margin-right:10%;
-}
-#portofolio .list .item {
-	border:1px solid #bababa;
-	border-radius:6px;
-	padding:1em;
-	background:white;
-	min-height:100px;
-	margin-right:12px;
-}
-#portofolio .list .item .logo {
-    width: 70px;
-    height: 70px;
-    overflow: hidden;
-    margin: 0 auto;
-    background: blue;
-    border-radius: 6em;
-}
-#portofolio .list .item .desc {
-	text-align:center;
-}
-#portofolio .list .item .desc h3 {
-	font-size:1.4em;
-	font-weight: 100;
-	text-align: center;
-	margin-top:12px;
-}
-#portofolio .list .more {
-	float:left;
-}
-#portofolio .list .more a {
-	font-size: 4em;
-    margin: 0.75em 12px;
-    display:inline-block;
-    text-decoration: none;
-    color:black;
-}
-#portofolio .list .more a:hover {
-    color:#41d8d6;
-    transition:0.13s ease;
 }
 footer{
 	width:100%;
