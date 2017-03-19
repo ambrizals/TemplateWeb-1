@@ -82,11 +82,6 @@ header .logo img {
 	max-height:5em;
 	width:auto;
 }
-header .menu a {
-	text-decoration: none;
-	color:white;
-
-}
 header .menu {
 	background: #d46513;
 }
@@ -100,6 +95,11 @@ header .menu .main li {
     float: left;
     padding: 0.8em 1em 0.5em 1em;
     margin: 8px 0 0 12px;
+}
+header .menu .main li a {
+	text-decoration: none;
+	color:white;
+
 }
 header .menu .main .active, header .menu .main li:hover  {
 	background: #efefef;
@@ -137,6 +137,9 @@ header .second-menu ul li:last-child {
 	width:96%;
 	margin:0 auto;
 }
+.konten {
+	padding:1em 0;
+}
 #intro {
     background: url(img/intro.jpg) #333333;
     background-size: cover;
@@ -145,7 +148,7 @@ header .second-menu ul li:last-child {
     padding: 3.3em 0;
     color: white;
 }
-.content {
+#intro .content {
 	display:inline-block;
 	margin-bottom:2em;
 	padding-bottom:2em;
@@ -181,6 +184,14 @@ header .second-menu ul li:last-child {
 	text-decoration: none;
 	font-size:4em;
 	letter-spacing: 20;
+}
+#contact-head {
+	background:url(img/contact_head.jpg) black;
+	background-size:cover;
+	background-blend-mode:luminosity;
+	text-align:center;
+	color:white;
+	padding:32px 0;
 }
 #services {
 	background:url(img/services.jpg);
@@ -241,6 +252,7 @@ header .second-menu ul li:last-child {
     float: left;
     display: block;
     margin-right: 3%;
+    padding-right: 24px;
     border-right: 1px solid;
 }
 #portofolio .item {
@@ -294,6 +306,10 @@ footer .bottomline {
 	width:100%;
 	float:left;
 	padding: 0.5em 0;
+}
+footer ul li a {
+	color:white;
+	text-decoration: none;
 }
 
 
