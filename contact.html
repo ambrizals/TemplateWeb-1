@@ -46,106 +46,34 @@
 			<h1>Hubungi Libscode</h1>
 
 		</div>
-		<article class="container konten">
+		<article class="fullpage">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
 			<br/>
 
-			<table border="1" width="500px" height="auto">
-				<tr>
-					<th>Nama</th>
-					<th>Telp</th>
-				</tr>
-				<tr>
-					<td>Ambrizal Suryadinata</td>
-					<td>08115349997</td>
-				</tr>
-			</table>
-
-			<br/>
-
-			<table border="1" width="500px" height="auto">
-				<tr>
-					<th rowspan="2">Nama</th>
-					<td>Cahyadi Triansyah</td>
-				</tr>
-				<tr>
-					<td>Ambrizal Suryadinata</td>
-				</tr>
-			</table>
-
-			<br/>
-
-			<table border="1" width="500px" height="auto">
-				<tr>
-					<th>Nama</th>
-					<th>Telp</th>
-				</tr>
-				<tr>
-					<td>Ambrizal Suryadinata</td>
-					<td>08115349997</td>
-				</tr>
-				<tr>
-					<td colspan="2">Cahyadi Triansyah</td>
-				</tr>
-			</table>
-			<br/>
-			<table border="1" width="100%" height="100px">
-				<tr>
-					<td colspan="3"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td rowspan="2"></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
-			<br/>
-			<table border="1" width="100%" height="150px">
-				<tr>
-					<td colspan="4"></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td rowspan="4"></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td colspan="3"></td>
-					<td></td>
-				</tr>
+			<table width="100%">
+				<form class="contact_form" action="#" method="post">
+					<tr>
+						<td>Subjek</td>
+						<td><input text="subject" name="subject" class="input">
+					</tr>
+					<tr>
+						<td>Jenis Pesan</td>
+						<td>
+							<select name="jenis_pesan" class="select">
+								<option value="jp_1">Emergency</option>
+								<option value="jp_2">Penting</option>
+								<option value="jp_3">Normal</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Isi Pesan</td>
+						<td><textarea name="isi_pesan" class="textarea" rows="10"></textarea>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit" class="btn btn-reverse btn-line"></input></td>
+				</form>
 			</table>
 		</article>		
 		<footer>

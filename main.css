@@ -52,7 +52,12 @@ body, h1, h2, h3, h4, p {
 .btn-big {
 	padding: 1em;
 	border-radius: 6px;
-    
+}
+
+.btn-line {
+	padding:1em;
+	width:100%;
+	border-radius:6px;
 }
 
 /* Main Style */
@@ -139,6 +144,11 @@ header .second-menu ul li:last-child {
 }
 .konten {
 	padding:1em 0;
+}
+.fullpage {
+	padding:1em 0;
+	margin:0 auto;
+	width:80%;
 }
 #intro {
     background: url(img/intro.jpg) #333333;
@@ -272,6 +282,10 @@ header .second-menu ul li:last-child {
 #portofolio .item .info-port {
 	width:60%;
 	float:left;
+}
+.input, .textarea, .select {
+	width:100%;
+	padding:6px;
 }
 footer{
 	width:100%;
