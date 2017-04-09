@@ -46,36 +46,27 @@
 			<h1>Hubungi Libscode</h1>
 		</div>
 		<article class="fullpage">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-			<br/>
+			<?php
+				$host = mysql_connect("localhost", "root", "");
+				$db = mysql_select_db("web");
+				
+				if (!empty($_POST['contact'])) {
+					header("location:contact.php");
+				}
+				elseif ($host & $db) {
+					$subject =$_POST['subject'];
+					$jenis_pesan = $_POST['jenis_pesan'];
+					$isi_pesan = $_POST['isi_pesan'];
 
-			<table width="100%">
-				<form class="contact_form" action="contact_send.php" method="post">
-				<input type="hidden" name="contact" value="kontak">
-					<tr>
-						<td>Subjek</td>
-						<td><input text="subject" name="subject" class="input">
-					</tr>
-					<tr>
-						<td>Jenis Pesan</td>
-						<td>
-							<select name="jenis_pesan" class="select">
-								<option value="Emergency">Emergency</option>
-								<option value="Penting">Penting</option>
-								<option value="Normal">Normal</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td>Isi Pesan</td>
-						<td><textarea name="isi_pesan" class="textarea" rows="10"></textarea></td>
-					</tr>
-					<tr>
-						<td colspan="2"><input type="submit" class="btn btn-reverse btn-line" value="Kirim"></input></td>
-					</tr>
-				</form>
-			</table>
+					$kueri = 'insert into libs_contact values("'.$subject.'","'.$jenis_pesan.'","'.$isi_pesan.'")';
+					mysql_query($kueri);
+					echo '<p>Pesan terkirim dan akan direspon selama 3x24jam';
+				}
+				else {
+					echo "Koneksi Gagal";
+				}
+			?>
 		</article>		
 		<footer>
 			<div class="container">
