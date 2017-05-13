@@ -62,6 +62,17 @@ body, h1, h2, h3, h4, p {
 .hal {
 	display:inline-block;
 }
+.info {
+	padding:1em;
+	border:1px solid #666;
+	margin: 1em 0;
+}
+.prefix {
+	background: green;
+    padding: 0.5em;
+    color: white;
+    border-radius: 5px;
+}
 .error-info{
 	background: #f53737;
     color: white;
@@ -73,6 +84,43 @@ body, h1, h2, h3, h4, p {
     color: white;
     padding: 1em;
     margin: 1em 0;
+}
+.pagination {
+	background: #2ab5f9;
+    color: white;
+    padding: 0.5em 0.8em;
+	border-radius:4px;
+	display:inline-block;
+}
+.selected {
+	background:none;
+	color:black;
+	border:1px solid #666;
+	border-radius:4px;
+}
+.table {
+	background: rgba(239, 239, 239, 0.46);
+    width: 100%;
+    margin: 0;
+    border-spacing: 0;
+}
+.table th {
+	background: #6b6868;
+    color: white;
+    padding: 1em 0;
+}
+.table td{
+	padding:1em 2em;
+	text-align:justify;
+}
+.table .judulWid {
+	width:20%;
+	background:black;
+	color:white;
+}
+.table .separator {
+	background:#fff;
+	padding:0.5em;
 }
 /* Main Style */
 header {

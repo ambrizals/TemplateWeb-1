@@ -22,56 +22,33 @@
 			<div class="menu">
 				<div class="container">
 					<ul class="main">
-						<li><a href="index.html">Home</a></li>
+						<li class="active"><a href="index.html">Home</a></li>
 						<li><a href="#">Services</a></li>
-						<li class="active"><a href="portofolio.html">Portofolio</a></li>
+						<li><a href="portofolio.html">Portofolio</a></li>
 						<li><a href="#">About</a></li>
 						<li><a href="contact.php">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="second-menu">
-				<div class="container">
-					<ul>
-						<li><a href="#">Crew List</a></li>
-						<li><a href="#">Client Area</a></li>
-						<li><a href="#">Project</a></li>
-						<li><a href="#">Carrer</a></li>
+                        <li><a href="logout.php">Logout</a></li>
 					</ul>
 				</div>
 			</div>
 			<!--- asdsad -->
 		</header>
+        <?php 
+		session_start();
+		if ($_SESSION['LibsLogon'] == 1) {
+		?>
 		<div id="contact-head">
-			<h1>Portofolio Libscode</h1>
+			<h1>Halaman Admin</h1>
 		</div>
-		<article class="container konten">
-			<div class="row hal">
-				<div class="content_body">
-					<div class="item">
-						<h3>Item</h3>
-						<p>Lorem ipsum dolor sit amet</p>
-					</div>
-					
-					<div class="item">
-						<h3>Item</h3>
-						<p>Lorem ipsum dolor sit amet</p>
-					</div>
-					
-					<div class="item">
-						<h3>Item</h3>
-						<p>Lorem ipsum dolor sit amet</p>
-					</div>
-				</div>
-				
-				<div class="sidebar">
-					<div class="window">
-						<h2>Info</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-					</div>
-				</div>
-			</div>
-		</article>
+		<article class="fullpage">
+			<h2>Silahkan pilih menu untuk melakukan manage halaman</h2>
+		</article>	
+        <?php }
+			else{
+				$_SESSION['LibsNLogin'] = 5;
+				header("location:login.php");
+			}
+		?>	
 		<footer>
 			<div class="container">
 				<div class="row">

@@ -22,9 +22,9 @@
 			<div class="menu">
 				<div class="container">
 					<ul class="main">
-						<li><a href="index.html">Home</a></li>
+						<li><a href="index.php">Home</a></li>
 						<li><a href="#">Services</a></li>
-						<li class="active"><a href="portofolio.html">Portofolio</a></li>
+						<li><a href="portofolio.php">Portofolio</a></li>
 						<li><a href="#">About</a></li>
 						<li><a href="contact.php">Contact</a></li>
 					</ul>
@@ -43,35 +43,67 @@
 			<!--- asdsad -->
 		</header>
 		<div id="contact-head">
-			<h1>Portofolio Libscode</h1>
+			<h1>Login Admin</h1>
 		</div>
-		<article class="container konten">
-			<div class="row hal">
-				<div class="content_body">
-					<div class="item">
-						<h3>Item</h3>
-						<p>Lorem ipsum dolor sit amet</p>
-					</div>
-					
-					<div class="item">
-						<h3>Item</h3>
-						<p>Lorem ipsum dolor sit amet</p>
-					</div>
-					
-					<div class="item">
-						<h3>Item</h3>
-						<p>Lorem ipsum dolor sit amet</p>
-					</div>
-				</div>
+		<article class="fullpage">
+        <?php
+			include "koneksi.php";	
+			// Create connection
+			if ($connect->connect_error) {
+				die("Connection failed: " . $conn->connect_error);
+				exit;
+			}
 				
-				<div class="sidebar">
-					<div class="window">
-						<h2>Info</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-					</div>
-				</div>
-			</div>
-		</article>
+			session_start();
+			if (!empty($_SESSION['LibsNLogin'])) {
+				echo "<p class='error-info'>Anda perlu login untuk mengakses halaman ini !</p>";
+				$_SESSION['LibsNLogin'] = 0;
+			}
+			
+			if (!empty($_SESSION['LibsLogon'])){
+				header("location:index.php");
+			}
+			elseif (!empty($_POST['btnlogin'])) {
+				$username = $_POST['username'];
+				$password = $_POST['password'];
+				if (empty($username)) {
+					echo "<p class='error-info'>Username tidak boleh kosong</p>";
+				}
+				elseif (empty($password)) {
+					echo "<p class='error-info'>Password tidak boleh kosong</p>";
+				}
+				else {
+					//Convert password ke MD5
+					$pwd = md5($password);
+					$login = "SELECT * FROM web.lbs_useradmin where (useradminUsername = '".$username."') & (useradminPassword ='".$pwd."')";
+					$proses = mysqli_query($connect,$login);
+					$result = mysqli_num_rows($proses);
+					if ($result == 1) {
+						$_SESSION['LibsLogon'] = 1;
+						header("location:index.php");
+					}
+					else {
+						echo "<p class='error-info'>User atau Password Salah !</p>";
+					}
+				}
+			}
+		?>
+        	<table width="100%">
+            	<form action="" method="post">
+                    <tr>
+                        <td>Username :</td>
+                        <td><input type="text" name="username" class="input" /></td>
+                    </tr>
+                    <tr>
+                        <td>Password :</td>
+                        <td><input type="password" name="password" class="input" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" name="btnlogin" class="btn btn-reverse btn-line" value="Login"/></td>
+                    </tr>
+                </form>
+            </table>
+		</article>		
 		<footer>
 			<div class="container">
 				<div class="row">
