@@ -26,7 +26,7 @@
 				<div class="container">
 					<ul class="main">
 						<li><a href="index.php">Home</a></li>
-						<li><a href="#">Services</a></li>
+						<li><a href="services.php">Services</a></li>
 						<li><a href="portofolio.html">Portofolio</a></li>
 						<li><a href="#">About</a></li>
 						<li class="active"><a href="contact.php">Contact</a></li>
@@ -89,7 +89,14 @@
                             <?php
                                 $kueriBalas = "select * from lbs_replycontactmsg where idContactmsg = ".$_GET['showMsg']."";
                                 $queryReply = mysqli_query($connect,$kueriBalas);
-                                $balasan=mysqli_fetch_assoc($queryReply)
+								$hitungBalasan = mysqli_num_rows($queryReply);
+                                $balasan=mysqli_fetch_assoc($queryReply);
+								
+								if ($hitungBalasan > 0) {
+									$dibalasUser = $balasan['useradminID'];
+									$kueriUserBalas = 'select * from lbs_useradmin where useradminID = '.$dibalasUser.'';
+									$queryUserBalas = mysqli_query($connect,$kueriUserBalas);
+									$ambilUserreply=mysqli_fetch_assoc($queryUserBalas);
                             ?>
                             <tr>
                                 <td colspan="2"><center>Balasan</center></td>
@@ -97,8 +104,16 @@
                             <tr>
                                 <td colspan="2">
                                     <?php echo $balasan['contentReplycontactmsg']; ?>
+									<hr>
+									<p>Tanggal Balas : <?php echo $balasan['timeReplycontactmsg']; ?>
+                                    <p>Dibalas oleh : <?php echo $ambilUserreply['useradminName']; ?>
                                 </td>
                             </tr>
+                            <?php } else {?>
+								<tr>
+                                	<td colspan="2"><center><p>Belum ada balasan</p></center></td>
+                                </tr>
+							<?php }?>
                         </table>
                         <div class="info">
                             <center>
@@ -108,7 +123,7 @@
                                 if ($hitungReply == 0) { ?>
                                     <a href="contactResponse.php?balas=<?php echo $_GET['showMsg'] ?>" class="btn btn-big" >Jawab</a>
                                 <?php } else { ?>
-                                    <a href="#" class="btn btn-big">Sudah Terjawab</a>
+
                                 <?php } ?>
                             </center>
                         </div>

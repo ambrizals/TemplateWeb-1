@@ -78,8 +78,11 @@
 					$login = "SELECT * FROM web.lbs_useradmin where (useradminUsername = '".$username."') & (useradminPassword ='".$pwd."')";
 					$proses = mysqli_query($connect,$login);
 					$result = mysqli_num_rows($proses);
+					$ambilInfoUser = mysqli_fetch_assoc($proses);
 					if ($result == 1) {
 						$_SESSION['LibsLogon'] = 1;
+						$_SESSION['LibsUserName'] = $ambilInfoUser['useradminName'];
+						$_SESSION['LibsUserID'] = $ambilInfoUser['useradminID'];
 						header("location:index.php");
 					}
 					else {

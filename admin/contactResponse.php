@@ -26,7 +26,7 @@
 				<div class="container">
 					<ul class="main">
 						<li><a href="index.php">Home</a></li>
-						<li><a href="#">Services</a></li>
+						<li><a href="services.php">Services</a></li>
 						<li><a href="portofolio.html">Portofolio</a></li>
 						<li><a href="#">About</a></li>
 						<li class="active"><a href="contact.php">Contact</a></li>
@@ -70,7 +70,7 @@
                             $check = 1;
                         }
                         if ($check == 0) {
-                            $kueri = "INSERT INTO lbs_replycontactmsg(subjectReplycontactmsg,idContactmsg,emailReplycontactmsg,typeReplycontactmsg,contentReplycontactmsg,timeReplycontactmsg) VALUES('".$subject."','".$_GET['balas']."','".$email."','".$jenis_pesan."','".$isi_pesan."','".date("Y/m/d h:i:s")."')";
+                            $kueri = "INSERT INTO lbs_replycontactmsg(subjectReplycontactmsg,idContactmsg,useradminID,emailReplycontactmsg,typeReplycontactmsg,contentReplycontactmsg,timeReplycontactmsg) VALUES('".$subject."','".$_GET['balas']."','".$_SESSION['LibsUserID']."','".$email."','".$jenis_pesan."','".$isi_pesan."','".date("Y/m/d h:i:s")."')";
                             if ($connect->query($kueri) === TRUE) {
 								$mail=$isi_pesan;
 								$to="admin@localhost";
@@ -131,11 +131,11 @@
 				<form action="" method="POST">
 				<tr>
 					<td class="judulWid">Subjek</td>
-					<td><input text="text" name="subject" class="input" value="Re: <?php echo $pesan['titleContactmsg'];?>" readonly="true">
+					<td><input text="text" name="subject" class="input" value="Re: <?php echo $pesan['titleContactmsg'];?>" readonly>
 				</tr>
 				<tr>
 					<td class="judulWid">Email :</td>
-					<td><input text="text" name="email" class="input" value="<?php echo $pesan['emailContactmsg'];?>" readonly="true">
+					<td><input text="text" name="email" class="input" value="<?php echo $pesan['emailContactmsg'];?>" readonly>
 				</tr>
 				<tr>
 					<?php 
